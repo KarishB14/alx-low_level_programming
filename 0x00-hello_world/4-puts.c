@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  *
  *    * main - print to screen
