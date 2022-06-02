@@ -1,17 +1,12 @@
 #include <stdio.h>
 
 /**
+ * main - print to screen
  *
- *    * main - print to screen
- *
- *       *
- *
- *          * Return: zero
- *
- *             */
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
-
 {
 
 		char Mystr[] = "\"Programming is like building a multilingual puzzle";
@@ -21,5 +16,4 @@ int main(void)
 			puts(Mystr);
 
 				return (0);
-
 }
