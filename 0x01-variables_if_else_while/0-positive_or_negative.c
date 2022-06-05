@@ -2,39 +2,42 @@
 #include <time.h>
 #include <studio.h>
 /**
- * main - Prints a random number and states whether
- * it is positive, negative, or zero.
- *
- *     * Return: Always 0.
+ * main - enter point
+ * Return: always 0 (success)
  */
 int main(void)
 {
+	int n;
 
-	 int n;
+		srand(time(0));
 
+			n = rand() - RAND_MAX / 2;
 
+				if (n > 0)
 
-	  srand(time(0));
+						{
 
-	   n = rand() - RAND_MAX / 2;
+									printf("%d is positive\n", n);
 
-	    /* your code goes there */
+										}
 
-	    if (n > 0)
+					else if (n < 0)
 
-		      printf("%d is positive\n", n);
+							{
 
-	     else if (n < 0)
+										printf("%d is negative\n", n);
 
-		       printf("%d is negative\n", n);
+											}
 
-	      else
+						else if (n == 0)
 
-		        printf("%d is zero\n", n);
+								{
 
+											printf("%d is zero\n", n);
 
+												}
 
-	       return (0);
+							return (0);
 
 }
 
