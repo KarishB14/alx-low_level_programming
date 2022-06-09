@@ -7,7 +7,7 @@
  *
  * Return: square root of x
  *
- */
+*/
 
 double _sqrt(double x)
 {
@@ -59,7 +59,7 @@ void largest_prime_factor(long int num)
  * main - Entry point
  *
  * Return: Always 0 (Success)
- */
+*/
 int main(void)
 {
 
