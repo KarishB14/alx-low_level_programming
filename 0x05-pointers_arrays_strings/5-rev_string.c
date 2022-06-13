@@ -1,37 +1,39 @@
 #include "main.h"
-#include <stdio.h>
-#include <unistd.h>
+
 /**
- *rev_string - function that reverses a string.
- *@s: table of caracter
- *Return: Void
+  *rev_string- prints in reverse
+  *_strlen- count
+ *@s: checked
+ *Return: nothing
  */
+int _strlen(char *s)
+{
+
+	int i, len;
+
+	len = 0;
+
+	for (i = 0; s[i] != '\0'; ++i)
+	{
+		len++;
+	}
+	return (len);
+}
 
 void rev_string(char *s)
 {
-	long int i = sizeof(s);
-	char *p = s;
-	/* while (*p != '\0') */
-	/* { */
-	/* 	printf("%c" ,*p++); */
-	/*  } */
-	printf("lent of p = %ld\n", sizeof(p));
+	int strsize = _strlen(s);
+	int i;
 
-	while (i >= 0)
+	char c;
+
+	i = 0;
+
+	while (i < (strsize / 2))
 	{
-		/* printf("i=%d\n",i); */
-		/* printf("siz-i=%ld\n",sizeof(s) - i); */
-		/* printf ("%c", s[i--]); */
-		*(p + (sizeof(s) - i)) = s[i];
-		/* printf("sizeof = %ld \n", sizeof(s)); */
-		/* printf("%c\n", s[i]); */
-		/* p++; */
-		printf("\np=%c\n" ,*p);
-	       printf("size of p = %ld\n", sizeof(p));
-	        i--;
-
+		c = *(s + i);
+		*(s + i) = *(s + strsize - 1 - i);
+		*(s + strsize - 1 - i) = c;
+		i++;
 	}
-	printf("\n");
-	/* sleep(2); */
-	/* *s = *p; */
 }
