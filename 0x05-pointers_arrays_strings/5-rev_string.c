@@ -1,39 +1,25 @@
-#include "main.h"
-
 /**
-  *rev_string- prints in reverse
-  *_strlen- count
- *@s: checked
- *Return: nothing
+ * rev_string - reverses a string
+ *
+ * @s: string parameter input
+ *
+ * Return: Nothing
  */
-int _strlen(char *s)
-{
-
-	int i, len;
-
-	len = 0;
-
-	for (i = 0; s[i] != '\0'; ++i)
-	{
-		len++;
-	}
-	return (len);
-}
 
 void rev_string(char *s)
 {
-	int strsize = _strlen(s);
-	int i;
+	int l, i;
+	char ch;
 
-	char c;
+	/*find string length without null char*/
+	for (l = 0; s[l] != '\0'; ++l)
+		;
 
-	i = 0;
-
-	while (i < (strsize / 2))
+	/*swap the string by looping to half the string*/
+	for (i = 0; i < l / 2; ++i)
 	{
-		c = *(s + i);
-		*(s + i) = *(s + strsize - 1 - i);
-		*(s + strsize - 1 - i) = c;
-		i++;
+		ch = s[i];
+		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
+		s[l - 1 - i] = ch;
 	}
 }
