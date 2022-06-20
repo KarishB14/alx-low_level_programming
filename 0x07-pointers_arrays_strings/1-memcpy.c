@@ -1,19 +1,18 @@
-#include "main.h"
-#include <string.h>
-/* #include <stdio.h> */
-void *memcpy(void *dest, const void *src, size_t n);
-/*
- *_memcpy - function that fills memory with a constant byte.
- *@dest: poiter of char type
- *@src: integer
- *@n: unsigned int n
- *Return: @s char value
+/**
+ * _memcpy - function that copies memory area
+ *
+ * @dest: buffer where we will copy to
+ * @src: what we are to copy
+ * @n: n bytes of @src
+ *
+ * Return: Always 0 (Success)
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	void *p = dest;
+	unsigned int i;
 
-	memcpy(p, (char *)src, n);
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
 	return (dest);
 }
