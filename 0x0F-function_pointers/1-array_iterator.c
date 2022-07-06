@@ -6,7 +6,7 @@
  *
  * @array: array to iterate
  * @size: size of array
- * action: pointer to function to call
+ * @action: pointer to function to call
  *
  * Return: empty if @array and @action is NULL
  */
