@@ -9,28 +9,16 @@
  */
 void free_listint2(listint_t **head)
 {
-	if (head == NULL)
-	{
-		return;
-	}
-	free_listint(head->next);
-	free(head);
-}
+	listint_t *temp, *node;
 
-/**
- * free_listint2 - free a struct linked list
- *
- * @head: first element
- */
-void free_listint2(listint_t **head)
-{
-	listint_t *new;
-
-	if (head == NULL)
-	{
+	if (*head == NULL)
 		return;
+	node  = *head;
+	while (node != NULL)
+	{
+		temp = node->next;
+		free(node);
+		node = temp;
 	}
-	new = *head;
 	*head = NULL;
-	free_listint(new);
 }
