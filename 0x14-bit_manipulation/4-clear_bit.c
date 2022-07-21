@@ -2,7 +2,7 @@
 
 /**
  * clear_bit - sets the value of a bit to 0 at a given index.
- * 
+ *
  * @n: address of n.
  * @index: position
  * Return: 1 if it worked, -1 if an error occurred.
